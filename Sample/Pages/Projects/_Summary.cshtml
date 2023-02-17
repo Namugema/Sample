@@ -1,0 +1,25 @@
+﻿@using Sample.Core;
+
+@model Project
+
+<div class="card">
+    <div class="card-header">
+        <h3>@Model.Name</h3>
+    </div>
+    <div class="card-body">
+        <span>Description: @Model.Description</span>
+        <span>Status:&nbsp;@Model.Status</span>
+    </div>
+    <div class="card-footer">
+        <a class="btn btn-lg" asp-page="./Detail" asp-route-projectId="@Model.Id">
+            <i class="glyphicon glyphicon-zoom-in"></i>
+        </a>
+        <a class="btn btn-lg" asp-page="./Edit" asp-route-projectId="@Model.Id">
+            <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn btn-lg" asp-page="./Delete" asp-route-projectId="@Model.Id">
+            <i class="glyphicon glyphicon-trash"></i>
+        </a>
+    </div>
+
+</div>

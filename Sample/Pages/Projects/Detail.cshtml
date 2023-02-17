@@ -1,0 +1,23 @@
+﻿@page "{projectId:int}"
+@model Sample.Pages.Projects.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h3>@Model.Project.Name</h3>
+<div>
+    Id: @Model.Project.Id
+</div>
+<div>
+    Description: @Model.Project.Description
+</div>
+<div>
+    Status: @Model.Project.Status
+</div>
+
+@if (Model.Message != null)
+{
+            <div class="alert alert-info">@Model.Message</div>
+}
+
+<a asp-page="./List" class="btn btn-default">All Projects</a>

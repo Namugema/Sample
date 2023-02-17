@@ -1,0 +1,39 @@
+﻿@page
+@model Sample.Pages.Projects.ClientProjectsModel
+@{
+    ViewData["Title"] = "Client Projects";
+}
+<h2>Client Projects</h2>
+<table id="projects" class="table">
+
+</table>
+
+@section Scripts{
+    <!--<environment include="Development">
+        <link href="~/css/datatable.css" rel="stylesheet" />
+        <link href="~/css/datatable.min.css" rel="stylesheet" />
+        <script src="~/js/datatable.js"></script>
+        <script src="~/js/datatable.min.js"></script>
+        Find out ways of including js files outside www.root folder
+    </environment>-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.13.2/datatables.min.css" />
+
+        <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.13.2/datatables.min.js"></script>
+    <script>
+        var statuses = ["New", "InProgress", "Complete", "Discontinued"]
+        $(function(){
+            $.ajax("/api/projects/", {method:"get"}).then(function(response){
+                    //console.dir(response);
+                    $("#projects").dataTable({
+                        data: response,
+                        columns: [
+                        { "data": "name" },
+                        { "data": "description" },
+                        { "data": "status", "render": function(data){return statuses[data]} },
+                        { "data": "githubRepo" }
+                        ]
+                    });
+                });
+        });
+    </script>
+}

@@ -1,0 +1,47 @@
+﻿@page "{projectId:int?}"
+@model Sample.Pages.Projects.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+<h3>Editing Project: @Model.project.Name</h3>
+
+<form method="post">
+    <input type="hidden" asp-for="project.Id" />
+    <div class="form-group">
+        <label asp-for="project.Name"></label>
+        <input asp-for="project.Name" class="form-control" />
+        <span class="text-danger" asp-validation-for="project.Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="project.Description"></label>
+        <input asp-for="project.Description" class="form-control" />
+        <span class="text-danger" asp-validation-for="project.Description"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="project.GithubRepo"></label>
+        <input asp-for="project.GithubRepo" class="form-control" />
+        <span class="text-danger" asp-validation-for="project.GithubRepo"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="project.StartDate"></label>
+        <input type="date" asp-for="project.StartDate" class="form-control" />
+        <span class="text-danger" asp-validation-for="project.StartDate"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="project.EndDate"></label>
+        <input type="date" asp-for="project.EndDate" class="form-control" />
+        <span class="text-danger" asp-validation-for="project.EndDate"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="project.Status"></label>
+        <select class="form-control" asp-for="project.Status" asp-items="Model.Statuses">
+        </select>
+        <span class="text-danger" asp-validation-for="project.Status"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
