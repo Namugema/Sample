@@ -1,0 +1,17 @@
+D:\Projects\Sample\Sample.Data\bin\Release\net6.0\Sample.Data.deps.json
+D:\Projects\Sample\Sample.Data\bin\Release\net6.0\Sample.Data.runtimeconfig.json
+D:\Projects\Sample\Sample.Data\bin\Release\net6.0\Sample.Data.dll
+D:\Projects\Sample\Sample.Data\bin\Release\net6.0\Sample.Data.pdb
+D:\Projects\Sample\Sample.Data\bin\Release\net6.0\Sample.Core.dll
+D:\Projects\Sample\Sample.Data\bin\Release\net6.0\Sample.Core.pdb
+D:\Projects\Sample\Sample.Data\obj\Release\net6.0\Sample.Data.csproj.AssemblyReference.cache
+D:\Projects\Sample\Sample.Data\obj\Release\net6.0\Sample.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Sample\Sample.Data\obj\Release\net6.0\Sample.Data.AssemblyInfoInputs.cache
+D:\Projects\Sample\Sample.Data\obj\Release\net6.0\Sample.Data.AssemblyInfo.cs
+D:\Projects\Sample\Sample.Data\obj\Release\net6.0\Sample.Data.csproj.CoreCompileInputs.cache
+D:\Projects\Sample\Sample.Data\obj\Release\net6.0\Sample.Data.csproj.CopyComplete
+D:\Projects\Sample\Sample.Data\obj\Release\net6.0\Sample.Data.dll
+D:\Projects\Sample\Sample.Data\obj\Release\net6.0\refint\Sample.Data.dll
+D:\Projects\Sample\Sample.Data\obj\Release\net6.0\Sample.Data.pdb
+D:\Projects\Sample\Sample.Data\obj\Release\net6.0\Sample.Data.genruntimeconfig.cache
+D:\Projects\Sample\Sample.Data\obj\Release\net6.0\ref\Sample.Data.dll

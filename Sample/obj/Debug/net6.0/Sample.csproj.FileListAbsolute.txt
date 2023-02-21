@@ -298,3 +298,4 @@ D:\Projects\Sample\Sample\obj\Debug\net6.0\refint\Sample.dll
 D:\Projects\Sample\Sample\obj\Debug\net6.0\Sample.pdb
 D:\Projects\Sample\Sample\obj\Debug\net6.0\Sample.genruntimeconfig.cache
 D:\Projects\Sample\Sample\obj\Debug\net6.0\ref\Sample.dll
+D:\Projects\Sample\Sample\bin\Debug\net6.0\appsettings.Production.json

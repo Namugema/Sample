@@ -7,7 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddDbContextPool<SampleDbContext>(options => options.UseSqlServer(
     builder.Configuration.GetConnectionString("SampleDb")));
+
 builder.Services.AddScoped<IProjectData, SqlProjectData>();
+//builder.Services.AddScoped<IProjectData, InMemoryProjectData>();
 
 builder.Services.AddControllers();
 
@@ -30,5 +32,16 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 app.MapControllers();
+
+//MigrateDatabase(app);
+
+void MigrateDatabase(WebApplication app)
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var db = scope.ServiceProvider.GetRequiredService<SampleDbContext>();
+        db.Database.Migrate();
+    }
+}
 
 app.Run();
